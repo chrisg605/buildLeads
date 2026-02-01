@@ -1,15 +1,9 @@
 services:
-  app:
-    build:
-      context: .
-    image: nextjs-dev
-    ports:
-      -  "3000:3000"
-    environment:
-      NODE_ENV: development
   db:
-    image: postgres:17-alpine
+    image: postgres:16
     environment:
       POSTGRES_PASSWORD: example
     ports:
       - "5432:5432"
+
+  

@@ -3,11 +3,12 @@ import { auth0 } from "@/lib/auth0";
 import LoginButton from "@/components/LoginButton";
 import LogoutButton from "@/components/LogoutButton";
 import Profile from "@/components/Profile";
+import Submitdata from "@/components/submit"
+ 
 
 export default async function Home() {
   const session = await auth0.getSession();
   const user = session?.user;
-
   return (
     <div className="app-container">
       <div className="main-card-wrapper">
@@ -21,8 +22,10 @@ export default async function Home() {
         <div className="action-card">
           {user ? (
             <div className="logged-in-section">
-              <p className="logged-in-message">✅ Successfully logged in!</p>
+              <Submitdata />
+              <p className="logged-in-message">✅ Successfully loged in!</p>
               <Profile />
+              
               <LogoutButton />
             </div>
           ) : (
@@ -30,6 +33,7 @@ export default async function Home() {
               <p className="action-text">
                 Welcome! Please log in to access your protected content.
               </p>
+              
               <LoginButton />
             </>
           )}

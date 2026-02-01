@@ -10,20 +10,34 @@
   },
   "dependencies": {
     "@auth0/nextjs-auth0": "^4.14.0",
-    "next": "15.5.9",
+    "@prisma/adapter-pg": "^7.3.0",
+    "@prisma/client": "^7.3.0",
+    "dotenv": "^17.2.3",
+    "lodash": "^4.17.23",
+    "next": "16.1.6",
+    "pg": "^8.17.2",
     "puppeteer": "^24.35.0",
-    "react": "^19.1.2",
-    "react-dom": "^19.1.2"
+    "react": "19.2.4",
+    "react-dom": "19.2.4"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
     "@tailwindcss/postcss": "^4",
-    "@types/node": "^20",
-    "@types/react": "^19",
-    "@types/react-dom": "^19",
+    "@types/node": "^20.19.30",
+    "@types/pg": "^8.16.0",
+    "@types/react": "19.2.10",
+    "@types/react-dom": "19.2.3",
     "eslint": "^9",
-    "eslint-config-next": "15.5.9",
+    "eslint-config-next": "16.1.6",
+    "prisma": "^7.3.0",
     "tailwindcss": "^4",
+    "tsx": "^4.21.0",
     "typescript": "^5"
+  },
+  "overrides": {
+    "hono": "^4.10.3",
+    "valibot": "^1.2.0",
+    "@types/react": "19.2.10",
+    "@types/react-dom": "19.2.3"
   }
 }
