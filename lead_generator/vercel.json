@@ -1,0 +1,8 @@
+{
+  "crons": [
+    {
+      "path": "/api/cron/updatePermits",
+      "schedule": "0 11 * * *"
+    }
+  ]
+}

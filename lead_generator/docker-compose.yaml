@@ -5,5 +5,10 @@ services:
       POSTGRES_PASSWORD: example
     ports:
       - "5432:5432"
+    volumes:
+      - d18b2f34f6fcd3eb77fdcf57bed95c0d348af5a43b1c05c2e5b1c5338b725ff0:/var/lib/postgresql/data
 
+volumes:
+  d18b2f34f6fcd3eb77fdcf57bed95c0d348af5a43b1c05c2e5b1c5338b725ff0:
+    external: true
   

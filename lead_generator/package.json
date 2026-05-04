@@ -9,16 +9,20 @@
     "lint": "eslint"
   },
   "dependencies": {
-    "@auth0/nextjs-auth0": "^4.14.0",
+    "@auth0/nextjs-auth0": "^4.19.0",
     "@prisma/adapter-pg": "^7.3.0",
     "@prisma/client": "^7.3.0",
+    "auth0": "^5.9.0",
     "dotenv": "^17.2.3",
+    "express": "^5.2.1",
     "lodash": "^4.17.23",
-    "next": "16.1.6",
+    "lucide-react": "^1.14.0",
+    "next": "^16.2.4",
     "pg": "^8.17.2",
     "puppeteer": "^24.35.0",
     "react": "19.2.4",
-    "react-dom": "19.2.4"
+    "react-dom": "19.2.4",
+    "stripe": "^22.1.0"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
@@ -27,17 +31,12 @@
     "@types/pg": "^8.16.0",
     "@types/react": "19.2.10",
     "@types/react-dom": "19.2.3",
+    "@vercel/node": "^5.7.15",
     "eslint": "^9",
     "eslint-config-next": "16.1.6",
     "prisma": "^7.3.0",
     "tailwindcss": "^4",
     "tsx": "^4.21.0",
     "typescript": "^5"
-  },
-  "overrides": {
-    "hono": "^4.10.3",
-    "valibot": "^1.2.0",
-    "@types/react": "19.2.10",
-    "@types/react-dom": "19.2.3"
   }
 }

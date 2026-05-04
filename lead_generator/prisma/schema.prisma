@@ -17,7 +17,14 @@ model Users {
   id    Int     @id @default(autoincrement())
   auth0_id     String @unique
   name String
+  subscription Int @default(value: -1)
+  next_sub Int @default(value: -1)
+  nextSubDate DateTime @default(now())
+  credits Int @default(value: 0)
+  top_ups Int @default(value: 0)
+  stripe_id String? @unique
   user_jobs User_Job[]
+  stripe_subscription_id String? @unique
 }
 
 model Jobs {
@@ -26,19 +33,42 @@ model Jobs {
   address String
   job_description String
   estimated_cost Int
-  job_type String
-  contact_info String   
-  created_at DateTime
+  job_type String  
+  issued_date DateTime
   user_jobs User_Job[]
+  contractor String
+  contractor_license String
+  city String
+  traced Boolean @default(value: false)
+  contacts Contacts[]
 }
 
 model User_Job {
+  id Int @id @default(autoincrement())
   user Users @relation(fields: [user_id], references: [id])
   user_id Int 
   job Jobs @relation(fields: [job_id], references: [id])
   job_id Int
   job_state String                
   contacted Boolean @default(value: false)
+  saved Boolean @default(value: false)
 
   @@unique([user_id, job_id])
+}
+
+model Contacts {
+  id              Int               @id @default(autoincrement())
+  job_id          Int
+  name            String?
+  job             Jobs              @relation(fields: [job_id], references: [id])
+  owner           Boolean @default(value: false)
+  contact_methods contact_methods[]
+}
+
+model contact_methods {
+  id         Int      @id @default(autoincrement())
+  contact_id Int
+  type       String   // "phone", "email"
+  value      String   // the actual phone/email
+  contact    Contacts @relation(fields: [contact_id], references: [id])
 }
