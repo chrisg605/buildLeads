@@ -56,7 +56,7 @@ export default function TermsPage() {
             </li>
             <li className="flex gap-3">
               <span className="flex-shrink-0">•</span>
-              <span>Contact us at <a href="mailto:buildleads.app@gmail.com" className="text-amber-700 font-semibold hover:underline">buildleads.app@gmail.com</a> with questions</span>
+              <span>Contact us at <a href="mailto:support@buildleads.org" className="text-amber-700 font-semibold hover:underline">support@buildleads.org</a> with questions</span>
             </li>
           </ul>
         </div>
@@ -414,7 +414,7 @@ export default function TermsPage() {
               <div className="bg-slate-50 p-4 rounded-lg">
                 <h4 className="font-semibold text-slate-900 mb-2">General Questions & Support</h4>
                 <p className="text-slate-700 text-sm">
-                  <strong>Email:</strong> <a href="mailto:buildleads.app@gmail.com" className="text-blue-600 hover:underline">buildleads.app@gmail.com</a><br/>
+                  <strong>Email:</strong> <a href="mailto:support" className="text-blue-600 hover:underline">support</a><br/>
                   <strong>Response time:</strong> 2-5 business days
                 </p>
               </div>
@@ -425,7 +425,7 @@ export default function TermsPage() {
                   If you believe someone is violating these Terms (scraping, spamming, hacking), please email:
                 </p>
                 <p className="text-slate-700 text-sm mt-2">
-                  <strong>Email:</strong> <a href="mailto:buildleads.app@gmail.com" className="text-blue-600 hover:underline">buildleads.app@gmail.com</a><br/>
+                  <strong>Email:</strong> <a href="mailto:support" className="text-blue-600 hover:underline">support</a><br/>
                   <strong>Subject:</strong> "Abuse Report - [describe violation]"
                 </p>
               </div>

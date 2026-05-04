@@ -370,10 +370,10 @@ export default async function LandingPage() {
               Still have questions? We&apos;re happy to help.
             </p>
             <a
-              href="mailto:buildleads.app@gmail.com"
+              href="mailto:support@buildleads.org"
               className="text-[13px] font-medium text-[#378ADD] hover:text-[#185FA5]"
             >
-              buildleads.app@gmail.com
+              support@buildleads.org
             </a>
           </div>
         </div>
@@ -402,10 +402,10 @@ export default async function LandingPage() {
           ))}
         </div>
         <a
-          href="mailto:buildleads.app@gmail.com"
+          href="mailto:support@buildleads.org"
           className="block text-[13px] text-[#378ADD] font-medium hover:text-[#185FA5] mb-2.5"
         >
-          buildleads.app@gmail.com
+          support@buildleads.org
         </a>
         <p className="text-[12px] text-[#8AAFC8]">© 2026 BuildLeads. All rights reserved.</p>
       </footer>

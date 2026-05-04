@@ -258,7 +258,7 @@ export default function PrivacyPage() {
               We maintain an incident response plan and will notify affected parties of any data breaches within applicable legal timeframes.
             </p>
             <p className="text-slate-700 text-sm">
-              No system is perfectly secure. If you believe our service has a security vulnerability, please contact us at <a href="mailto:buildleads.app@gmail.com" className="text-blue-600 hover:underline">buildleads.app@gmail.com</a> rather than disclosing publicly.
+              No system is perfectly secure. If you believe our service has a security vulnerability, please contact us at <a href="mailto:support@buildleads.org" className="text-blue-600 hover:underline">support@buildleads.org</a> rather than disclosing publicly.
             </p>
           </PrivacySection>
 
@@ -326,7 +326,7 @@ export default function PrivacyPage() {
             </div>
 
             <p className="text-slate-700 text-sm bg-slate-50 p-4 rounded">
-              <strong>To submit a CCPA request:</strong> Email <a href="mailto:buildleads.app@gmail.com" className="text-blue-600 hover:underline">buildleads.app@gmail.com</a> with your request. We will verify your identity and respond within the required timeframe.
+              <strong>To submit a CCPA request:</strong> Email <a href="mailto:support@buildleads.org" className="text-blue-600 hover:underline">support@buildleads.org</a> with your request. We will verify your identity and respond within the required timeframe.
             </p>
           </PrivacySection>
 
@@ -343,7 +343,7 @@ export default function PrivacyPage() {
                   For CCPA requests, privacy questions, or concerns:
                 </p>
                 <p className="text-slate-700 text-sm">
-                  <strong>Email:</strong> <a href="mailto:buildleads.app@gmail.com" className="text-blue-600 hover:underline">buildleads.app@gmail.com</a><br/>
+                  <strong>Email:</strong> <a href="mailto:support@buildleads.org" className="text-blue-600 hover:underline">support@buildleads.org</a><br/>
                   <strong>Response time:</strong> 45 days
                 </p>
               </div>
@@ -365,7 +365,7 @@ export default function PrivacyPage() {
                   To report a security vulnerability:
                 </p>
                 <p className="text-slate-700 text-sm">
-                  <strong>Email:</strong> <a href="mailto:buildleads.app@gmail.com" className="text-blue-600 hover:underline">buildleads.app@gmail.com</a><br/>
+                  <strong>Email:</strong> <a href="mailto:support@buildleads.org" className="text-blue-600 hover:underline">support@buildleads.org</a><br/>
                   <strong>Note:</strong> Please do not publicly disclose vulnerabilities
                 </p>
               </div>
