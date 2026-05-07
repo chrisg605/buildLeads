@@ -1,7 +1,7 @@
 // api/cron/updatePermits.ts
 // Runs at 3 AM PST (11 AM UTC) every day
 import prisma from "@/../lib/prisma";
-import { VercelRequest, VercelResponse } from '@vercel/node';
+
 
 interface CronResponse {
   success: boolean;
@@ -11,33 +11,21 @@ interface CronResponse {
   count?: number;
 }
 
-export default async function handler(
-  req: VercelRequest,
-  res: VercelResponse
-): Promise<void> {
-  // Verify request is from Vercel
-  const authHeader = req.headers['authorization'];
+export async function POST(request: Request) {
+  // Verify request is from cron service
+  const authHeader = request.headers.get('authorization');
   const expectedAuth = `Bearer ${process.env.CRON_SECRET}`;
   
   if (!authHeader || authHeader !== expectedAuth) {
-    res.status(401).json({
-      success: false,
-      timestamp: new Date().toISOString(),
-      message: 'Unauthorized request',
-      error: 'Missing or invalid authorization header'
-    });
-    return;
-  }
-
-  // Only allow POST requests
-  if (req.method !== 'POST') {
-    res.status(405).json({
-      success: false,
-      timestamp: new Date().toISOString(),
-      message: 'Method not allowed',
-      error: 'Only POST requests are supported'
-    });
-    return;
+    return Response.json(
+      {
+        success: false,
+        timestamp: new Date().toISOString(),
+        message: 'Unauthorized request',
+        error: 'Missing or invalid authorization header'
+      },
+      { status: 401 }
+    );
   }
 
   try {
@@ -91,7 +79,7 @@ export default async function handler(
       message: 'Database updated successfully',
     };
 
-    res.status(200).json(response);
+    return Response.json(response, { status: 200 });
 
   } catch (error) {
     const errorMessage = error instanceof Error ? error.message : 'Unknown error occurred';
@@ -110,6 +98,6 @@ export default async function handler(
       error: errorMessage
     };
 
-    res.status(500).json(response);
+    return Response.json(response, { status: 500 });
   }
 }
