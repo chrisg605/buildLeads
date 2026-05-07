@@ -117,7 +117,7 @@ const CheckIcon = () => (
 export default async function LandingPage() {
   const session = await auth0.getSession();
   const user = session?.user;
-  const link = user ? "/dashboard" : "/auth/login";
+  const link = user ? "/dashboard" : "/auth/login?returnTo=/dashboard";
   return (
     <div className="font-sans text-[#1a2e42] bg-white">
 
