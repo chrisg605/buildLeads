@@ -117,7 +117,7 @@ const CheckIcon = () => (
 export default async function LandingPage() {
   const session = await auth0.getSession();
   const user = session?.user;
-  const link = user ? "/dashboard" : "/api/auth/login?returnTo=/dashboard";
+  const link = user ? "/dashboard" : "/auth/login?returnTo=/dashboard";
   return (
     <div className="font-sans text-[#1a2e42] bg-white">
 
@@ -151,18 +151,18 @@ export default async function LandingPage() {
  
       {/* Buttons */}
       <div className="flex gap-2">
-        <Link
+        <a
           href={link}
           className="text-[13px] font-medium text-[#1a2e42] border-[1.5px] border-[#1a2e42] px-4 md:px-5 py-2 rounded-lg hover:bg-[#f7fafd] hover:border-[#185FA5] hover:text-[#185FA5] transition-all whitespace-nowrap"
         >
           Log in
-        </Link>
-        <Link
+        </a>
+        <a
           href={link}
           className="text-[13px] font-medium text-white bg-[#378ADD] border-[1.5px] border-[#378ADD] px-4 md:px-5 py-2 rounded-lg hover:bg-[#185FA5] hover:border-[#185FA5] transition-all whitespace-nowrap"
         >
           Get started
-        </Link>
+        </a>
       </div>
     </nav>
 
@@ -182,12 +182,12 @@ export default async function LandingPage() {
           BuildLeads turns raw permit data into real leads — complete with phone, email, and address
           — so you can reach the right person before anyone else does.
         </p>
-        <Link
+        <a
           href={link}
           className="inline-block bg-[#378ADD] text-white text-sm font-medium px-7 py-2.5 rounded-lg hover:bg-[#185FA5] transition-colors"
         >
           Start finding leads
-        </Link>
+        </a>
 
         {/* Contact preview card — fully static, no JS */}
         <div className="mt-12 mx-auto max-w-[320px] bg-white border border-[#B5D4F4] rounded-2xl p-5 text-left shadow-[0_2px_12px_rgba(55,138,221,0.08)]">
@@ -319,12 +319,12 @@ export default async function LandingPage() {
                   </ul>
                 </div>
                 <div className="mt-5">
-                  <Link
+                  <a
                     href={link}
                     className="block w-full text-center text-[13px] font-medium text-white bg-[#378ADD] px-4 py-2 rounded-lg hover:bg-[#185FA5] transition-colors"
                   >
                     Get started
-                  </Link>
+                  </a>
                 </div>
               </div>
             ))}
