@@ -49,7 +49,7 @@ export default function JobState({ jobId, job_state }: { jobId: number, job_stat
             <option value="completed">Completed</option>
             </select> 
              <svg
-    xmlns="http://www.w3.org/2000/svg"
+    xmlns="https://www.w3.org/2000/svg"
     viewBox="0 0 20 20"
     fill="currentColor"
     className="pointer-events-none absolute right-3 top-1/2 size-4 -translate-y-1/2 text-slate-400"

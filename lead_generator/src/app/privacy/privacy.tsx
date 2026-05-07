@@ -399,7 +399,7 @@ export default function PrivacyPage() {
           display: inline-block;
           width: 20px;
           height: 20px;
-          background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="%23999" stroke-width="2"><path d="M19 14l-7 7m0 0l-7-7m7 7V3"></path></svg>');
+          background-image: url('data:image/svg+xml;utf8,<svg xmlns="https://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="%23999" stroke-width="2"><path d="M19 14l-7 7m0 0l-7-7m7 7V3"></path></svg>');
           background-size: contain;
           background-repeat: no-repeat;
           transition: transform 0.3s;
