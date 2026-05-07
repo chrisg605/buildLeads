@@ -85,7 +85,7 @@ export default async function SettingsPage() {
             <p className="text-xs text-gray-400 mt-0.5">Sign out of your account</p>
           </div>
           <a
-            href="/auth/logout?returnTo=https://studious-space-disco-4jq7559qvv75357xx-3000.app.github.dev/"
+            href="/auth/logout?returnTo=https://www.buildleads.org/"
             className="rounded-lg border border-red-200 px-3 py-1.5 text-xs font-medium text-red-600 hover:bg-red-50 transition-colors"
           >
             Logout
