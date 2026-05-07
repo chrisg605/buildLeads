@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Auth0Provider } from "@auth0/nextjs-auth0/client";
+import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 
 
@@ -21,6 +22,7 @@ export default function RootLayout({
               {children}
             </main>
         </Auth0Provider>
+        <Analytics />
       </body>
     </html>
   );
