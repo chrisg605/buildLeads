@@ -13,6 +13,8 @@ interface CronResponse {
 
 export async function POST(request: Request) {
   // Verify request is from cron service
+  const startTime = Date.now();
+    console.log('✓ Cron job started at', new Date().toISOString());
   const authHeader = request.headers.get('authorization');
   const expectedAuth = `Bearer ${process.env.CRON_SECRET}`;
   
@@ -29,10 +31,6 @@ export async function POST(request: Request) {
   }
 
   try {
-    const startTime = Date.now();
-    console.log('✓ Cron job started at', new Date().toISOString());
-
-
     const duration = Date.now() - startTime;
     console.log(`✓ Cron job completed in ${duration}ms`);
     const date = new Date();
@@ -72,6 +70,7 @@ export async function POST(request: Request) {
           },
         });
     });
+    console.log(json_data);
 
     const response: CronResponse = {
       success: true,
