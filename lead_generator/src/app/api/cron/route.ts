@@ -147,6 +147,7 @@ export async function GET(request: Request) {
     },
     body: JSON.stringify(body)
     })
+    console.log(data);
     const json_data = await data.json();
     json_data.forEach(async (permit_lead:any) => {//insert data into db  
         const jobs = await prisma.jobs.create({
@@ -163,6 +164,7 @@ export async function GET(request: Request) {
           },
         });
     });
+    console.log(json_data);
 
     const response: CronResponse = {
       success: true,
