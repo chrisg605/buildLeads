@@ -69,9 +69,9 @@ export async function POST(request: Request) {
             city: permit_lead.city_town
           },
         });
+        console.log(jobs);
     });
-    console.log(json_data);
-
+  
     const response: CronResponse = {
       success: true,
       timestamp: new Date().toISOString(),
