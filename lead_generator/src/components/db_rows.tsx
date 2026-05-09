@@ -123,7 +123,7 @@ return <>
       {jobs.map((job: any) => {
         const userJob = job.user_jobs[0];
         const isPriority =
-          (!job.contractor || job.contractor === "OWNER/BUILDER") &&
+          (!job.contractor || job.contractor === "OWNER/BUILDER" || job.contractor === "none") &&
           (sub?.subscription ?? -1) > 0;
 
         const priorityLabel = !job.contractor

@@ -63,8 +63,8 @@ export async function POST(request: Request) {
             job_description: permit_lead.description,
             issued_date: date_iso,
             job_name: permit_lead.construction,
-            contractor: (permit_lead.contractor ? permit_lead.contractor : ""),
-            contractor_license: (permit_lead.contractor_license ? permit_lead.contractor_license : ""),
+            contractor: (permit_lead.contractor ? permit_lead.contractor : "none"),
+            contractor_license: (permit_lead.contractor_license ? permit_lead.contractor_license : "none"),
             job_type: permit_lead.type_permit,
             city: permit_lead.city_town
           },
