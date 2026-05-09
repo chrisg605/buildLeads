@@ -29,7 +29,7 @@ model Users {
 
 model Jobs {
   id    Int     @id @default(autoincrement())
-  job_name String @default("No Name)
+  job_name String @default("No Name")
   address String @default("Unknown")
   job_description String @default("None")
   estimated_cost Int
