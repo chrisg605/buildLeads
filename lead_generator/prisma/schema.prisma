@@ -38,7 +38,7 @@ model Jobs {
   user_jobs User_Job[]
   contractor String @default("none")
   contractor_license String @default("none")
-  city String @default("Unknown)
+  city String @default("Unknown")
   traced Boolean @default(value: false)
   contacts Contacts[]
 }
