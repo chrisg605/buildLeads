@@ -133,7 +133,7 @@ export async function GET(request: Request) {
   const date_float = date_iso.slice(0, 10) + "T00:00:00";
   const url = `https://data.marincounty.gov/api/v3/views/mkbn-caye/query.json`;
   const body = {//set up request
-    query: `SELECT construction_value,construction,description,address,city_town,issued_date,received_date,type_permit,contractor,contractor_license WHERE issued_date="${date_float}"`,
+    query: `SELECT construction_value,construction,description,address,city_town,issued_date,received_date,type_permit,contractor,contractor_license WHERE issued_date="${date_float}" OR issued_date > "${date_float}"`,
     page: {
         pageNumber: 1,
         pageSize: 100
