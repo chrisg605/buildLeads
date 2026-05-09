@@ -29,16 +29,16 @@ model Users {
 
 model Jobs {
   id    Int     @id @default(autoincrement())
-  job_name String
-  address String
-  job_description String
+  job_name String?
+  address String @default("Unknown")
+  job_description String @default("None")
   estimated_cost Int
-  job_type String  
+  job_type String?  
   issued_date DateTime
   user_jobs User_Job[]
   contractor String @default("none")
   contractor_license String @default("none")
-  city String
+  city String?
   traced Boolean @default(value: false)
   contacts Contacts[]
 }
