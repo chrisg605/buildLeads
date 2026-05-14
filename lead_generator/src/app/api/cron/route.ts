@@ -149,21 +149,25 @@ export async function GET(request: Request) {
     })
     console.log(data);
     const json_data = await data.json();
-    json_data.forEach(async (permit_lead:any) => {//insert data into db  
-        const jobs = await prisma.jobs.create({
+    await Promise.all(
+      json_data.map((permit_lead: any) =>
+        prisma.jobs.create({
           data: {
             address: permit_lead.address,
-            estimated_cost: permit_lead.construction_value ? parseInt(permit_lead.construction_value) : 0,
+            estimated_cost: permit_lead.construction_value
+              ? parseInt(permit_lead.construction_value)
+              : 0,
             job_description: permit_lead.description,
             issued_date: date_iso,
             job_name: permit_lead.construction,
-            contractor: (permit_lead.contractor ? permit_lead.contractor : ""),
+            contractor: permit_lead.contractor ?? "",
             contractor_license: permit_lead.contractor_license,
             job_type: permit_lead.type_permit,
-            city: permit_lead.city_town
+            city: permit_lead.city_town,
           },
-        });
-    });
+        })
+      )
+    );
     console.log(json_data);
 
     const response: CronResponse = {
